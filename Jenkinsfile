@@ -17,10 +17,10 @@ pipeline {
                 sh 'mvn test'
                 
                 // Archive test results
-                junit
+                junit '**/target/surefire-reports/*.xml'
             }
         }
-         stage('Deploy') {
+        stage('Deploy') {
             steps {
                 // Deploy the application (e.g., to a server)
                 // This step depends on your deployment process
