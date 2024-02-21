@@ -20,11 +20,6 @@ pipeline {
                 junit '**/target/surefire-reports/*.xml'
             }
         }
-        stage('Deploy') {
-            steps {
-                // Deploy the application (e.g., to a server)
-                // This step depends on your deployment process
-            }
-        }
+        
     }
 }
